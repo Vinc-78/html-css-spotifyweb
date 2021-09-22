@@ -28,11 +28,14 @@ aside{ background-color: black;
 
 .conteiner { background-color: rgb(20, 25, 34);
              flex-grow: 1;
+             
              }
 
 footer {background-color: rgb(40, 40, 40);
         min-height: 60px;
-        flex-grow: 0;}
+        flex-grow: 0;
+        z-index: 10;}
+
 
 
 /************************************************
@@ -40,24 +43,56 @@ footer {background-color: rgb(40, 40, 40);
 ************************************************/
 .conteiner-top { background-color: rgba(8,11,18, 0.3);
                 padding: 24px 7px;
-                color:white;
                 text-align: right;
-                font-size: 14px;
+                font-size: 10px;
                 position: fixed;
                 top: 0;
                 width: 100%;
                 right:0;
-               }
+                z-index: 99;
+              } 
 
 
 .conteiner-top-btn-right span {border: 1px solid white;
                                padding: 14px 40px;
                                border-radius: 25px;
-                               
+                               color:white;
                                }
 
+.conteiner-nav { padding-top:65px;
+                 text-align: center; 
+                 font-size: 10px;
+                 font-weight: bold;
+                 }
+
+.conteiner-nav ul li { display: inline-block;
+                       padding: 20px 14px;}
+
+.conteiner-nav ul li a { color:rgb(117, 119, 124);
+                          text-decoration: none;
+                          position: relative;}
+
+.line-green:after { content: "";
+                    width: 22px;
+                    height: 2px;
+                    background-color: lawngreen;
+                    position: absolute;
+                    bottom: 0;
+                    left:5px;
+                    display: none;}
 
 
+.conteiner h2 { color:white;}
+
+/************************************************
+* Classi hover
+************************************************/
+
+.conteiner-nav ul li:hover .line-green:after{display: initial;}
+
+
+.conteiner-top-btn-right span:hover {color:lawngreen;
+                                     border-color: lawngreen;}
 
 
 /************************************************
