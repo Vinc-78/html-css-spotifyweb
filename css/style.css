@@ -23,7 +23,8 @@ main{ background-color:aqua;
 aside{ background-color: black;
        min-width: 200px;
       flex-grow: 0;
-      flex-shrink: 1;}
+      flex-shrink: 1;
+      z-index: 100;}
 
 .conteiner { background-color: rgb(20, 25, 34);
              flex-grow: 1;
@@ -35,6 +36,17 @@ footer {background-color: rgb(40, 40, 40);
         min-height: 60px;
         flex-grow: 0;
         z-index: 10;}
+
+.aside-nav { display: flex;
+             flex-direction: column;
+             padding: 20px 0 10px 20px;
+            }
+
+.aside-nav-central {flex-grow: 1;
+                    flex-shrink: 0;}
+
+.aside-nav-sub { padding-top: 20px;
+                  } 
 
 
 
@@ -61,16 +73,18 @@ footer {background-color: rgb(40, 40, 40);
 
 .conteiner-nav { padding-top:65px;
                  text-align: center; 
-                 font-size: 10px;
+                 font-size: 11px;
                  font-weight: bold;
                  }
 
 .conteiner-nav ul li { display: inline-block;
                        padding: 20px 4px;}
 
-.conteiner-nav ul li a { color:rgb(117, 119, 124);
+.conteiner-nav ul li a {  color:rgb(117, 119, 124);
                           text-decoration: none;
                           position: relative;}
+
+                        
 
 .line-green:after { content: "";
                     width: 22px;
@@ -105,26 +119,97 @@ footer {background-color: rgb(40, 40, 40);
                   width:90%;
                 }
 
-.Album .Title { font-size: 16px;
-                color:white;
+.Album .Title { color:white;
                 font-weight: bold;
-                padding: 10px 0;}
+                padding: 10px 0;
+                font-size: 16px;}
 
 
 .Album .Sub-Title { font-size:12px;
                     color:rgb(125, 127, 132);
                     padding-bottom: 10px;
                      }
+/************************************************
+* Classi aside
+************************************************/
+
+
+.aside-logo img{ width: 70%;}
+/* provvisorio  il bordo sul centrale*/
+.aside-nav-central {border:1px solid ivory;
+                    overflow: auto;}
+
+.home-list { padding: 15px 0;}
+
+.home-list ul li a img {width: 18%;
+                        color: rgb(210, 210, 210);
+                        vertical-align:middle;
+                        padding-right: 5px;
+                        padding-bottom: 10px;}
+
+.home-list ul li a {text-decoration: none;
+                    color:rgb(117, 119, 124);
+                    font-weight: bold;
+                   
+                    }                       
+
+.lateraLine-green:before {content: "";
+                           height: 30px;
+                           width: 3px;
+                           background-color: lawngreen;
+                           position: absolute;
+                           left: -1px;
+                          display: none;}
+
+.user-install { color: rgb(117, 119, 124);
+                font-weight: bold;
+                font-size: 12px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgb(210, 210, 210);}
+
+.user-install img { width: 10%;
+                    vertical-align: middle;
+                    padding-right: 5px;
+                   }
+
+.user-identity { padding-top: 20px;}
+
+.user-identity img { width: 10%;
+                     background-color: rgb(128,128,128);
+                     border-radius: 100%;
+                     vertical-align: middle;
+                     padding: 1px;
+                     }
+
+.user-identity span { color:white;
+                      font-weight: bold;
+                      font-size: 12px;
+                      padding-left: 5px;
+}
+
 
 /************************************************
 * Classi hover
 ************************************************/
 
+
+/* Tasto in alto upgrade */
+
 .conteiner-nav ul li:hover .line-green:after{display: initial;}
 
+/* NAV-BAR superiore */
+
+.conteiner-nav ul li :hover  {color: white;}
 
 .conteiner-top-btn-right span:hover {color:lawngreen;
-                                     border-color: lawngreen;}
+                                     border-color: lawngreen;
+                                     font-size: 14px;}
+/* Aside list  */
+
+.home-list ul li:hover .lateraLine-green:before{display: initial;}
+
+
+.home-list ul li :hover  {color: white;}
 
 
 /************************************************
@@ -139,8 +224,20 @@ aside { min-width: 50px;}
 
 .Album {max-width: calc(100% / 2 );}
 
+.aside-logo .logo-small {display: initial;
+                         width: 70%;}
+
+.home-list ul li a img {width: 75%;}
 
 
+
+.user-install img {width: 50%;
+                   padding-left: 10px;}
+
+.user-identity img {width: 55%;
+}
+
+                
 }
 
 
@@ -154,6 +251,18 @@ aside { min-width: 50px;}
 .Album {max-width: calc(100% / 6 );}
 
 
+.aside-logo img{ width: 70%;}
+
+.aside-logo .logo-small {display: none;}
 
 }
 
+
+/************************************************
+* media queries large size PROVVISORIA PER LOGO
+************************************************/
+
+@media screen and (min-width: 560px) and (max-width: 919px) { 
+  .aside-logo .logo-small {display: none;}
+
+}
