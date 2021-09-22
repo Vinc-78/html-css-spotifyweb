@@ -5,36 +5,69 @@
 }
 
 /************************************************
-* Selettori TAG
+* Selettori TAG / layout
 ************************************************/
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-}
+main{ background-color:aqua;
+      height: calc(100vh - 60px);
+      flex-grow: 1;
+      display: flex;
+      }
 
-main {
-}
 
-footer {
-}
+aside{ background-color: black;
+       min-width: 200px;
+      flex-grow: 0;
+      flex-shrink: 1;}
+
+.conteiner { background-color: rgb(20, 25, 34);
+             flex-grow: 1;
+             }
+
+footer {background-color: rgb(40, 40, 40);
+        min-height: 60px;
+        flex-grow: 0;}
+
 
 /************************************************
-* Classi layout
+* Classi Conteiner
 ************************************************/
-.container {
-  max-width: 920px;
-  width: 100%;
-  margin: auto
-}
+.conteiner-top { background-color: rgba(8,11,18, 0.3);
+                padding: 24px 7px;
+                color:white;
+                text-align: right;
+                font-size: 14px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                right:0;
+               }
+
+
+.conteiner-top-btn-right span {border: 1px solid white;
+                               padding: 14px 40px;
+                               border-radius: 25px;
+                               
+                               }
+
+
+
+
 
 /************************************************
-* Classi Utilities
+* media queries xs size
 ************************************************/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+
+@media screen and (max-width: 559px) { 
+
+  aside { min-width: 50px;}
+
+.d-xs-no { display: none;}
+  
 }
