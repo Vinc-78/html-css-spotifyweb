@@ -9,7 +9,6 @@
 ************************************************/
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -28,6 +27,7 @@ aside{ background-color: black;
 
 .conteiner { background-color: rgb(20, 25, 34);
              flex-grow: 1;
+             overflow: auto;
              
              }
 
@@ -44,7 +44,7 @@ footer {background-color: rgb(40, 40, 40);
 .conteiner-top { background-color: rgba(8,11,18, 0.3);
                 padding: 24px 7px;
                 text-align: right;
-                font-size: 10px;
+                font-size: 12px;
                 position: fixed;
                 top: 0;
                 width: 100%;
@@ -66,7 +66,7 @@ footer {background-color: rgb(40, 40, 40);
                  }
 
 .conteiner-nav ul li { display: inline-block;
-                       padding: 20px 14px;}
+                       padding: 20px 4px;}
 
 .conteiner-nav ul li a { color:rgb(117, 119, 124);
                           text-decoration: none;
@@ -82,7 +82,39 @@ footer {background-color: rgb(40, 40, 40);
                     display: none;}
 
 
-.conteiner h2 { color:white;}
+.conteiner h2 { color:white;
+                padding: 20px 0;
+                }
+
+
+.Albums-Recently { padding: 0 20px;}
+
+
+
+.Albums-row {display: flex;
+             flex-wrap: wrap;
+             margin:auto;
+              }
+
+.Album   {display: flex;
+          flex-direction: column;
+          align-items: center;}
+
+
+.Album-img img  {  object-fit: cover;
+                  width:90%;
+                }
+
+.Album .Title { font-size: 16px;
+                color:white;
+                font-weight: bold;
+                padding: 10px 0;}
+
+
+.Album .Sub-Title { font-size:12px;
+                    color:rgb(125, 127, 132);
+                    padding-bottom: 10px;
+                     }
 
 /************************************************
 * Classi hover
@@ -101,8 +133,27 @@ footer {background-color: rgb(40, 40, 40);
 
 @media screen and (max-width: 559px) { 
 
-  aside { min-width: 50px;}
+aside { min-width: 50px;}
 
 .d-xs-no { display: none;}
-  
+
+.Album {max-width: calc(100% / 2 );}
+
+
+
 }
+
+
+
+/************************************************
+* media queries large size
+************************************************/
+
+@media screen and (min-width: 920px) { 
+
+.Album {max-width: calc(100% / 6 );}
+
+
+
+}
+
