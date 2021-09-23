@@ -192,7 +192,7 @@ aside h3 {color:white;
                                               color: rgb(117, 119, 124);
                                               text-decoration: none;
                                               font-weight: bold;
-                                              font-size: 12px;}
+                                              font-size: 25px;}
 
 .aside-nav-central {max-height: 200px;
                     padding-bottom: 10px;
@@ -206,7 +206,8 @@ aside h3 {color:white;
                                                  line-height: 30px;}
                                                  
                                                  
-                                                 
+   /*   Un alternativa all'utilizzo delle icone di Font Awesome per il Plus
+
 .aside-nav-central-top .add-list{ display: inline-flex;}
 
 .aside-nav-central-top .plus {color: black;
@@ -217,7 +218,8 @@ aside h3 {color:white;
                              width: 30px; 
                              height: 30px;
                              }
-                                               
+    */   
+
 .aside-nav-central-list {max-height: 100px;
                          overflow: auto;}
 
@@ -295,6 +297,37 @@ aside h3 {color:white;
 
 .add-list a:hover {color: white;}
 
+
+/*  hover tasto play quando vado sull'album*/
+/* posiziono l'icona di player */
+
+.Album{position: relative;
+       display: inline-block;
+       text-align: center;}
+
+/* Creo l'icona di pleyer è gli dò la posizione assoluta */
+.Album .Album-img .img_layover {
+                    font-size: 70px;
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -80%);/* -80 perchè in album c'è anche title e subtitle */
+                    display: none;
+                    z-index: 80;
+}
+/* Fa apparire un cursore sull'immagine */
+.Album:hover {
+  cursor: pointer;
+}
+/* Rende l'immagine opaca quando ci passo su con il mouse */
+.Album:hover .Album-img img {
+  opacity: 0.5;
+}
+/* Rende visibile l'icona */
+.Album:hover .Album-img .img_layover {
+  display: block;
+}
 
 
 
