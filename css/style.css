@@ -14,16 +14,18 @@ body {
 }
 
 main{ background-color:aqua;
-      height: calc(100vh - 60px);
+      height: calc(100vh - 50px);
       flex-grow: 1;
       display: flex;
       }
 
 
 aside{ background-color: black;
-       min-width: 100px;
+      min-width: 90px;
+      height: calc(100vh - 50px);
       flex-grow: 0;
       flex-shrink: 1;
+      justify-content: space-between;
       z-index: 100;}
 
 .conteiner { background-color: rgb(20, 25, 34);
@@ -33,20 +35,23 @@ aside{ background-color: black;
              }
 
 footer {background-color: rgb(40, 40, 40);
-        min-height: 60px;
+        min-height: 50px;
         flex-grow: 0;
         z-index: 10;}
 
 .aside-nav { display: flex;
              flex-direction: column;
-             padding: 20px 0 10px 20px;
+             padding: 10px 0 10px 10px;
             }
 
+.aside-nav-sup {flex-shrink: 1;}
+
 .aside-nav-central {flex-grow: 1;
-                    flex-shrink: 0;}
+                    flex-shrink: 0;
+                    }
 
 .aside-nav-sub { padding-top: 20px;
-                  } 
+                  flex-shrink: 1; } 
 
 
 
@@ -77,11 +82,14 @@ footer {background-color: rgb(40, 40, 40);
                  font-weight: bold;
                  }
 
-.conteiner-nav ul li { display: inline-block;
-                       padding: 20px 4px;}
 
-.conteiner-nav ul li a {  color:rgb(117, 119, 124);
-                          text-decoration: none;
+.conteiner-nav ul { list-style-type: none; }
+
+.conteiner-nav ul li { display: inline-block;
+                       padding: 20px 3px;}
+
+.conteiner-nav ul li a {  text-decoration: none;
+                          color:rgb(117, 119, 124);
                           position: relative;}
 
                         
@@ -117,7 +125,7 @@ footer {background-color: rgb(40, 40, 40);
 
 
 .Album-img img  {  object-fit: cover;
-                  width:92%; 
+                   width:100%; 
                 }
 
 .Album .Title { color:white;
@@ -126,7 +134,7 @@ footer {background-color: rgb(40, 40, 40);
                 font-size: 12px;}
 
 
-.Album .Sub-Title { font-size:12px;
+.Album .Sub-Title { font-size:10px;
                     color:rgb(125, 127, 132);
                     padding-bottom: 10px;
                      }
@@ -135,29 +143,28 @@ footer {background-color: rgb(40, 40, 40);
 /************************************************
 * Classi aside
 ************************************************/
-aside h3 {color:white;
-         }
 
 .aside-logo img{ width: 70%;}
-/* provvisorio  il bordo sul centrale*/
-.aside-nav-central {border:1px solid ivory;
-                    overflow: auto;}
+
 
 .home-list { padding: 15px 0;}
 
-.home-list ul li a img {width: 18%;
+.home-list ul li a img {width: 14%;
                         color: rgb(210, 210, 210);
                         vertical-align:middle;
                         padding-right: 5px;
                         padding-bottom: 10px;}
 
+
+.home-list ul { list-style-type: none; }
+
 .home-list ul li a {text-decoration: none;
                     color:rgb(117, 119, 124);
                     font-weight: bold;
-                   
+                    font-size: 12px;
                     }                       
 
-.lateraLine-green:before {content: "";
+.lateraLine-green:before { content: "";
                            height: 30px;
                            width: 3px;
                            background-color: lawngreen;
@@ -167,28 +174,49 @@ aside h3 {color:white;
 
 
 
-/* Aside centrale */
+/* Aside ccentral */
 
-.aside-nav-central a { text-decoration: none;
-                      color: rgb(117, 119, 124);
-                      text-decoration: none;
-                      font-weight: bold;
-                      font-size: 12px;}
+aside h3 {color:white;
+          padding-bottom:15px}
 
-.aside-nav-central {position: relative;}
 
-.aside-nav-central a span {padding-left: 50px;
-                           line-height: 40px;
-                           font-size: 20px;}
+.aside-nav-central .aside-nav-central-top a { text-decoration: none;
+                                              color: rgb(117, 119, 124);
+                                              text-decoration: none;
+                                              font-weight: bold;
+                                              font-size: 12px;}
 
-.aside-nav-central a ::before {content: "";
-                              background-color: grey;
-                              width: 40px; 
-                              height: 40px;
-                              position: absolute;
-                              left:0;
-                              top:25px}    
-                              
+.aside-nav-central {max-height: 200px;
+                    padding-bottom: 10px;
+                 }
+
+
+.aside-nav-central-top .add-list{ display: inline-flex;}
+
+.aside-nav-central .aside-nav-central-top a span {padding-left: 5px;                                             
+                                                  font-size: 16px;
+                                                 line-height: 30px;}
+
+.aside-nav-central-top .plus {color: black;
+                             text-align: center;
+                             font-size: 40px;
+                             line-height: 30px;
+                             background-color: grey;
+                             width: 30px; 
+                             height: 30px;
+                             }
+                                               
+.aside-nav-central-list {max-height: 100px;
+                         overflow: auto;}
+
+.aside-nav-central-list ul {list-style-type: none;}              
+
+.aside-nav-central-list ul a {text-decoration: none;
+                              color: rgb(117, 119, 124);
+                              text-decoration: none;
+                              font-weight: bold;
+                              font-size: 12px;}
+
 
 /* Aside inferiore */
 
@@ -258,19 +286,27 @@ aside { min-width: 50px;}
 
 .d-xs-no { display: none;}
 
-.Album {max-width: calc(100% / 2.2 );}
+/* Ho il gap di 15px ne tolgo uno di 7.5*/
+.Album {max-width: calc(100% / 2 - 7.5px );}
+
+.aside-nav {padding: 10px, 0;}
+
+.aside-nav-sup, .aside-nav-sub {text-align: center;}
+
 
 .aside-logo .logo-small {display: initial;
-                         width: 60%;}
-
-.home-list ul li a img {width: 65%;}
+                         width: 50%;}
 
 
 
-.user-install img {width: 50%;
-                   padding-left: 10px;}
+.home-list ul li a img {width: 55%;}
 
-.user-identity img {width: 55%;
+
+
+.user-install img {width: 35%;
+                   }
+
+.user-identity img {width: 35%;
 }
 
                 
@@ -284,8 +320,8 @@ aside { min-width: 50px;}
 
 @media screen and (min-width: 920px) { 
 
-.Album {max-width: calc(100% / 7 );
-} /* il 7 è ottenuto considerando il gap:15px del padre */
+.Album {max-width: calc(100% / 6 - 15px );
+} /* il gap è di 15px */
 
 
 .aside-logo img{ width: 70%;}
