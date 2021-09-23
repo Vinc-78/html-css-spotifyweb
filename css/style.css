@@ -108,16 +108,21 @@ footer {background-color: rgb(40, 40, 40);
                 padding: 20px 0;
                 }
 
+.conteiner h4 { color:rgb(125, 127, 132);
+                padding: 20px 0;
+                  }
 
-.Albums-Recently { padding: 0 20px;}
+.Albums-Recently,
+.Creato-to-John-Doe,
+.Artisti-Popolari { padding: 0 20px;}
 
 
 
 .Albums-row {display: flex;
              flex-wrap: wrap;
              gap:15px; 
-             justify-content: space-between;
               }
+
 
 .Album   {display: flex;
           flex-direction: column;
@@ -127,6 +132,9 @@ footer {background-color: rgb(40, 40, 40);
 .Album-img img  {  object-fit: cover;
                    width:100%; 
                 }
+
+.circle {border-radius: 100%;
+        overflow:hidden;}
 
 .Album .Title { color:white;
                 font-weight: bold;
@@ -191,11 +199,15 @@ aside h3 {color:white;
                  }
 
 
-.aside-nav-central-top .add-list{ display: inline-flex;}
+
 
 .aside-nav-central .aside-nav-central-top a span {padding-left: 5px;                                             
                                                   font-size: 16px;
                                                  line-height: 30px;}
+                                                 
+                                                 
+                                                 
+.aside-nav-central-top .add-list{ display: inline-flex;}
 
 .aside-nav-central-top .plus {color: black;
                              text-align: center;
@@ -272,6 +284,16 @@ aside h3 {color:white;
 
 .home-list ul li :hover,
 .user-install a :hover   {color: white;}
+
+
+/* Central play list */
+
+.aside-nav-central-list ul a:hover {color: white;}
+
+
+/* Add playlist */
+
+.add-list a:hover {color: white;}
 
 
 
