@@ -412,7 +412,7 @@ aside h3 {color:white;
 
 /* NAV-BAR superiore */
 
-.conteiner-nav ul li :hover  {color: white;}
+.conteiner-nav ul li :hover  {color: white}
 
 .conteiner-top-btn-right span:hover {color:lawngreen;
                                      border-color: lawngreen;
@@ -561,13 +561,6 @@ aside { min-width: 50px;}
                
 }
 
-  
-
-
-
-
-
-
 
 
 /************************************************
@@ -601,5 +594,65 @@ aside { min-width: 50px;}
   { font-size: 11px;}
 
   .conteiner-nav { font-size: 15px; }
+
+}
+
+/************************************************
+* BONUS  UNDER 345 PX  
+************************************************/
+
+
+@media screen and (max-width: 345px) { 
+  
+  .Albums-row{display: flex;
+    flex-direction: column;
+              align-items: center;}
+
+  .Album {position: relative;
+          max-width: 100%;
+
+        }
+
+  .Album-img img{ height: 0;}
+
+  .Album .Album-img .img_layover {
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    right: -50%;
+    bottom: -50%;
+    z-index: 80;
+    display: block;
+}
+.conteiner h2, 
+.conteiner h4{
+  padding: 10px 0;
+  text-align: center;
+}
+
+.conteiner-nav {
+  padding-top: 65px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.conteiner-nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+.footer-left img {display: none;}
+
+.volume_barr {
+  height: 26px;
+  width: 22px;
+  background-color: grey;
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: -webkit-center;
+}
+
+
 
 }
