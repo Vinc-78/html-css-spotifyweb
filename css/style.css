@@ -266,9 +266,9 @@ aside h3 {color:white;
 .footer-conteiner { display: flex;
                     }
 
-.footer-left,
+/* .footer-left,
 .footer-right {flex-shrink: 1;
-               flex-grow: 1;}
+               flex-grow: 1;} */
 
 .footer-central{flex-grow: 2;
                 flex-shrink: 0;
@@ -284,7 +284,7 @@ aside h3 {color:white;
               text-decoration: none;}
 
 
-.footer-left img {width: 10%;}
+.footer-left img {width: 40px}
 
 .song-name h3 { color: white;
                 font-size: 13px;
@@ -345,13 +345,17 @@ aside h3 {color:white;
               }
 /* Footer-right Controler */
 
-.footer-right {display:flex;
+.footer-right {width: 20%;
+              display:flex;
               align-items: center;
               padding: 15px 10px;
               text-decoration: none;
               
               }
-.footer-right ul li {list-style-type: none;}
+.footer-right ul {display: inline-block;}
+
+.footer-right ul li {list-style-type: none;
+                     padding: 0, 10px;}
 
 .footer-right ul li a {color: white;}
 
@@ -365,7 +369,7 @@ aside h3 {color:white;
               }
 
 .volume .volume_list .livello_volume {
-                width: 100%;
+                width: 70%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -391,9 +395,8 @@ aside h3 {color:white;
 
   .volume_barr .volume_point {
     position: absolute;
-    top: 50%;
+    bottom: -4px;
     right: 0;
-    display: block;
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -548,16 +551,30 @@ aside { min-width: 50px;}
 
 
 
-.user-install img {width: 35%;
-                   }
+.user-install img,
+.user-identity img {width: 35%;}
 
-.user-identity img {width: 35%;
-}
 
-.footer-left img {
-  width: 20%;
-}
-                
+
+.footer-left img { width: 20px;}
+
+.footer-left,
+.footer-central,
+.footer-right {padding: 10px 5px;}
+
+
+.song-name h3,
+.song-name p,
+.song-save, 
+.song-save a { padding-left: 5px;}
+
+
+
+  
+
+
+
+
 }
 
 
