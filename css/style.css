@@ -355,7 +355,7 @@ aside h3 {color:white;
 
 .footer-right ul li a {color: white;}
 
-
+.volume {width: 100%;}
 .volume .volume_list {
                 height: 100%;
                 display: flex;
@@ -365,7 +365,7 @@ aside h3 {color:white;
               }
 
 .volume .volume_list .livello_volume {
-                width: 70%;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
