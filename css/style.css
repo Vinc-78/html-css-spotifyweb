@@ -33,7 +33,7 @@ aside{ background-color: black;
              }
 
 footer {background-color: rgb(40, 40, 40);
-        min-height: 90px;
+        min-height: 80px;
         flex-grow: 0;
         z-index: 10;}
 
@@ -192,8 +192,9 @@ aside h3 {color:white;
                                               font-weight: bold;
                                               font-size: 25px;}
 
-.aside-nav-central {max-height: 200px;
+.aside-nav-central {max-height: 200px; 
                     padding-bottom: 10px;
+                    
                  }
 
 
@@ -262,16 +263,20 @@ aside h3 {color:white;
 /************************************************
 * Classi FOOTER
 ************************************************/
-.footer .footer-container { display: flex;
-  flex-direction: row;}
+.footer-conteiner { display: flex;
+                    }
 
 .footer-left,
-.footer-right {flex-shrink: 1;}
+.footer-right {flex-shrink: 1;
+               flex-grow: 1;}
 
-.footer-central{flex-grow: 1;
-flex-shrink: 0;
+.footer-central{flex-grow: 2;
+                flex-shrink: 0;
+                padding: 15px;
+                text-align: center;
 }
 
+/* Footer left-Album */
 
 .footer-left {display:flex;
               align-items: center;
@@ -279,7 +284,7 @@ flex-shrink: 0;
               text-decoration: none;}
 
 
-.footer-left img {width: 4%;}
+.footer-left img {width: 10%;}
 
 .song-name h3 { color: white;
                 font-size: 13px;
@@ -301,19 +306,16 @@ flex-shrink: 0;
 .controller .player_btn ul li {
                       display: inline-block;
                       padding: 0 10px;
-                      font-size: 20px;
-                      transition: scale 0.4s;
+                      font-size: 14px;
                       vertical-align: middle;
                     }
-                    
+/* Footer controller */                   
                     
 .controller .player_btn ul li a {
                 display: inline-block;
                 color:white;
               }
-.play-btn a {
-                font-size: 35px;
-              }
+                         
                           
 .player_time {
                 display: flex;
@@ -334,41 +336,81 @@ flex-shrink: 0;
                 flex-grow: 1;
               }
 
-.barr-position {
-                position: relative;
-                height: 100%;
-                width: 20%;
-                border-radius: 4px;
-                background-color: white;
-              }
 
-.barr_point {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                display: block;
-                width: 13px;
-                height: 13px;
-                border-radius: 50%;
-                background-color: white;
-                display: none;
-              }
-
- .time_barr:hover .barr_point {
-                display: block;
-              }
-
-
-.time_barr:hover .go_barr {
-                background-color:greenyellow
-              }
 
 .player_time .end-time {
                 color:white;
                 font-size: 12px;
                 padding-left: 20px;
               }
+/* Footer-right Controler */
+
+.footer-right {display:flex;
+              align-items: center;
+              padding: 15px 10px;
+              text-decoration: none;
+              
+              }
+.footer-right ul li {list-style-type: none;}
+
+.footer-right ul li a {color: white;}
+
+
+.volume .volume_list {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+              }
+
+.volume .volume_list .livello_volume {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+.volume .volume_list .livello_volume a {
+                padding-right: 10px;
+}
+.volume_barr {
+  height: 4px;
+  border-radius: 4px;
+  background-color: grey;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.volume_barr .green_barr {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  border-radius: 4px;
+  background-color: white; }
+
+
+  .volume_barr .volume_point {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+  }
+
+  .volume_barr:hover .volume_point {
+    display: block;
+  }
+  
+  
+  .volume_barr:hover .green_barr {
+    background-color:greenyellow
+  }
+
+
 /************************************************
 * Classi hover
 ************************************************/
@@ -441,6 +483,44 @@ flex-shrink: 0;
 }
 
 
+/* Per il player la linea della posizione e il pallino  */
+.barr-position {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.barr_point {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  display: none;
+}
+
+.time_barr:hover .barr_point {
+  display: block;
+}
+
+
+.time_barr:hover .barr-position {
+  background-color:greenyellow
+}
+
+/* Per il tasto del play che diventa più grande  */
+.play-btn  a  { font-size: 25px;
+  transition: 0.2s;}
+
+.player_btn .play-btn a:hover {transform: scale(1.3);}
+
+
 
 /************************************************
 * media queries xs size
@@ -474,6 +554,9 @@ aside { min-width: 50px;}
 .user-identity img {width: 35%;
 }
 
+.footer-left img {
+  width: 20%;
+}
                 
 }
 
