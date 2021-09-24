@@ -7,13 +7,15 @@
 /************************************************
 * Selettori TAG / layout
 ************************************************/
-body {
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
+.shell {height: 100vh;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
 }
 
-main{ height: calc(100vh - 65px);
+main{ height: calc(100% - 65px);
       flex-grow: 1;
       display: flex;
       }
@@ -256,9 +258,6 @@ aside h3 {color:white;
 .footer-conteiner { display: flex;
                     }
 
-/* .footer-left,
-.footer-right {flex-shrink: 1;
-               flex-grow: 1;} */
 
 .footer-central{flex-grow: 1;
                 flex-shrink: 0;
@@ -445,18 +444,20 @@ aside h3 {color:white;
 /*  hover tasto play quando vado sull'album*/
 /* posiziono l'icona di player */
 
-.Album{position: relative;
-       display: inline-block;
+.Album{display: inline-block;
        text-align: center;}
 
+.Album-img {position: relative;}
+
 /* Creo l'icona di pleyer è gli dò la posizione assoluta */
+
 .Album .Album-img .img_layover {
                     font-size: 70px;
                     color: white;
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50% , -80%);/* -80 perchè in album c'è anche title e subtitle */
+                    transform: translate(-50% , -50%);
                     display: none;
                     z-index: 80;
 }
@@ -587,10 +588,18 @@ aside { min-width: 50px;}
 
 
 /************************************************
-* media queries large size PROVVISORIA PER LOGO
+* media queries md sx  
 ************************************************/
 
 @media screen and (min-width: 560px) and (max-width: 919px) { 
   .aside-logo .logo-small {display: none;}
+
+  .Album {max-width: calc(100% / 4 - 15px );
+  } /* il gap è di 15px */
+
+  .aside-nav-central .aside-nav-central-top a span 
+  { font-size: 11px;}
+
+  .conteiner-nav { font-size: 15px; }
 
 }
