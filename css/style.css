@@ -13,7 +13,7 @@ body {
   flex-direction: column;
 }
 
-main{ height: calc(100vh - 80px);
+main{ height: calc(100vh - 65px);
       flex-grow: 1;
       display: flex;
       }
@@ -33,7 +33,7 @@ aside{ background-color: black;
              }
 
 footer {background-color: rgb(40, 40, 40);
-        min-height: 80px;
+        min-height: 50px;
         flex-grow: 0;
         z-index: 10;}
 
@@ -42,14 +42,10 @@ footer {background-color: rgb(40, 40, 40);
              padding: 10px 0 10px 15px;
             }
 
-.aside-nav-sup {flex-shrink: 1;}
-
 .aside-nav-central {flex-grow: 1;
-                    flex-shrink: 0;
-                    }
+                    height: 75%;}
 
-.aside-nav-sub { padding-top: 20px;
-                  flex-shrink: 1; } 
+.aside-nav-sub { padding-top: 20px;} 
 
 
 
@@ -192,12 +188,6 @@ aside h3 {color:white;
                                               font-weight: bold;
                                               font-size: 25px;}
 
-.aside-nav-central {max-height: 200px; 
-                    padding-bottom: 10px;
-                    
-                 }
-
-
 
 
 .aside-nav-central .aside-nav-central-top a span {padding-left: 5px;                                             
@@ -219,7 +209,7 @@ aside h3 {color:white;
                              }
     */   
 
-.aside-nav-central-list {max-height: 100px;
+.aside-nav-central-list {max-height: 75%; 
                          overflow: auto;}
 
 .aside-nav-central-list ul {list-style-type: none;}              
@@ -270,9 +260,9 @@ aside h3 {color:white;
 .footer-right {flex-shrink: 1;
                flex-grow: 1;} */
 
-.footer-central{flex-grow: 2;
+.footer-central{flex-grow: 1;
                 flex-shrink: 0;
-                padding: 15px;
+                padding: 10px;
                 text-align: center;
 }
 
@@ -280,7 +270,7 @@ aside h3 {color:white;
 
 .footer-left {display:flex;
               align-items: center;
-              padding: 15px 10px;
+              padding: 10px 5px;
               text-decoration: none;}
 
 
@@ -348,7 +338,7 @@ aside h3 {color:white;
 .footer-right {width: 20%;
               display:flex;
               align-items: center;
-              padding: 15px 10px;
+              padding: 10px 5px;
               text-decoration: none;
               
               }
@@ -357,15 +347,15 @@ aside h3 {color:white;
 .footer-right ul li {list-style-type: none;
                      padding: 0, 10px;}
 
-.footer-right ul li a {color: white;}
+.footer-right ul li a {color: white;
+                        padding: 0 5px;}
 
 .volume {width: 100%;}
 .volume .volume_list {
                 height: 100%;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                flex-wrap: wrap;
+                
               }
 
 .volume .volume_list .livello_volume {
@@ -374,9 +364,7 @@ aside h3 {color:white;
                 justify-content: space-between;
                 align-items: center;
               }
-.volume .volume_list .livello_volume a {
-                padding-right: 10px;
-}
+
 .volume_barr {
   height: 4px;
   border-radius: 4px;
@@ -549,33 +537,35 @@ aside { min-width: 50px;}
 
 .home-list ul li a img {width: 55%;}
 
-
+.footer-right { width: 25%; }
 
 .user-install img,
 .user-identity img {width: 35%;}
 
+.song-name h3,
+.volume .volume_list .livello_volume a { font-size: 14px}
 
+.song-name p {font-size:12px;}
 
-.footer-left img { width: 20px;}
+.song-save { font-size: 14px;}
 
-.footer-left,
-.footer-central,
-.footer-right {padding: 10px 5px;}
-
+.footer-left img { width: 22px;}
 
 .song-name h3,
 .song-name p,
 .song-save, 
 .song-save a { padding-left: 5px;}
 
-
+ 
+               
+}
 
   
 
 
 
 
-}
+
 
 
 
