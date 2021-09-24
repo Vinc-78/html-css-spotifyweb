@@ -13,8 +13,7 @@ body {
   flex-direction: column;
 }
 
-main{ background-color:aqua;
-      height: calc(100vh - 50px);
+main{ height: calc(100vh - 80px);
       flex-grow: 1;
       display: flex;
       }
@@ -22,11 +21,10 @@ main{ background-color:aqua;
 
 aside{ background-color: black;
       min-width: 90px;
-      height: calc(100vh - 50px);
       flex-grow: 0;
       flex-shrink: 1;
       justify-content: space-between;
-      z-index: 100;}
+      z-index: 8;}
 
 .conteiner { background-color: rgb(20, 25, 34);
              flex-grow: 1;
@@ -35,13 +33,13 @@ aside{ background-color: black;
              }
 
 footer {background-color: rgb(40, 40, 40);
-        min-height: 50px;
+        min-height: 90px;
         flex-grow: 0;
         z-index: 10;}
 
 .aside-nav { display: flex;
              flex-direction: column;
-             padding: 10px 0 10px 10px;
+             padding: 10px 0 10px 15px;
             }
 
 .aside-nav-sup {flex-shrink: 1;}
@@ -64,14 +62,14 @@ footer {background-color: rgb(40, 40, 40);
                 font-size: 12px;
                 position: fixed;
                 top: 0;
-                width: 100%;
+                width: 85% ;  /* per non coprire l'aside */
                 right:0;
                 z-index: 99;
               } 
-
+.conteiner-top-btn-right { padding-right: 15px;}
 
 .conteiner-top-btn-right span {border: 1px solid white;
-                               padding: 14px 40px;
+                               padding: 14px 35px;
                                border-radius: 25px;
                                color:white;
                                }
@@ -261,8 +259,116 @@ aside h3 {color:white;
                       padding-left: 5px;
 }
 
+/************************************************
+* Classi FOOTER
+************************************************/
+.footer .footer-container { display: flex;
+  flex-direction: row;}
+
+.footer-left,
+.footer-right {flex-shrink: 1;}
+
+.footer-central{flex-grow: 1;
+flex-shrink: 0;
+}
 
 
+.footer-left {display:flex;
+              align-items: center;
+              padding: 15px 10px;
+              text-decoration: none;}
+
+
+.footer-left img {width: 4%;}
+
+.song-name h3 { color: white;
+                font-size: 13px;
+               padding-left: 10px;
+               }
+
+.song-name p { color: rgb(117, 119, 124);
+                font-size: 11px;
+                padding-left: 10px;
+               }
+
+.footer-left a {text-decoration: none;}
+
+.song-save {padding-left: 15px }
+
+.song-save a{ padding-left: 20px;
+              color: rgb(117, 119, 124);}
+
+.controller .player_btn ul li {
+                      display: inline-block;
+                      padding: 0 10px;
+                      font-size: 20px;
+                      transition: scale 0.4s;
+                      vertical-align: middle;
+                    }
+                    
+                    
+.controller .player_btn ul li a {
+                display: inline-block;
+                color:white;
+              }
+.play-btn a {
+                font-size: 35px;
+              }
+                          
+.player_time {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+.player_time .time_point {
+                color: white;
+                font-size: 12px;
+                padding-right: 20px;
+              }
+.time_barr {
+                height: 4px;
+                border-radius: 4px;
+                background-color: white;
+                cursor: pointer;
+                flex-grow: 1;
+              }
+
+.barr-position {
+                position: relative;
+                height: 100%;
+                width: 20%;
+                border-radius: 4px;
+                background-color: white;
+              }
+
+.barr_point {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: white;
+                display: none;
+              }
+
+ .time_barr:hover .barr_point {
+                display: block;
+              }
+
+
+.time_barr:hover .go_barr {
+                background-color:greenyellow
+              }
+
+.player_time .end-time {
+                color:white;
+                font-size: 12px;
+                padding-left: 20px;
+              }
 /************************************************
 * Classi hover
 ************************************************/
@@ -297,6 +403,11 @@ aside h3 {color:white;
 
 .add-list a:hover {color: white;}
 
+
+/* Do all'icona (svg) del download un colore simile al testo con un filtro*/
+.user-install img {filter: contrast(0.1);}
+
+.user-install img:hover {filter: contrast(1);}
 
 /*  hover tasto play quando vado sull'album*/
 /* posiziono l'icona di player */
@@ -344,9 +455,8 @@ aside { min-width: 50px;}
 /* Ho il gap di 15px ne tolgo uno di 7.5*/
 .Album {max-width: calc(100% / 2 - 7.5px );}
 
-.aside-nav {padding: 10px, 0;}
 
-.aside-nav-sup, .aside-nav-sub {text-align: center;}
+.aside-nav-sup, .aside-nav-sub {text-align: left;}
 
 
 .aside-logo .logo-small {display: initial;
