@@ -210,11 +210,14 @@ aside h3 {color:white;
                              height: 30px;
                              }
     */   
+    
+.aside-nav-central-list {height: 75%; 
+                         overflow:hidden;} 
 
-.aside-nav-central-list {max-height: 75%; 
-                         overflow: auto;}
 
-.aside-nav-central-list ul {list-style-type: none;}              
+.aside-nav-central-list ul {list-style-type: none;
+                            height: 80%; 
+                            overflow:auto;}              
 
 .aside-nav-central-list ul a {text-decoration: none;
                               color: rgb(117, 119, 124);
@@ -606,7 +609,6 @@ aside { min-width: 50px;}
 /************************************************
 * BONUS  UNDER 345 PX  
 ************************************************/
-
 
 @media screen and (max-width: 345px) { 
   
